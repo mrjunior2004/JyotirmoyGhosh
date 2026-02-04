@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Itne may itna he milega</title>
+<style>
+    body{
+        margin:0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(120deg,#ff9a9e,#fad0c4);
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        color:#fff;
+    }
+    .card{
+        background: rgba(136, 37, 37, 0.6);
+        padding:40px;
+        border-radius:20px;
+        width:90%;
+        max-width:500px;
+        box-shadow:0 0 20px rgba(0,0,0,0.4);
+        animation: fadeIn 2s ease-in-out;
+    }
+    h1{
+        margin-bottom:10px;
+        font-size:28px;
+    }
+    p{
+        font-size:18px;
+        line-height:1.6;
+    }
+    button{
+        margin-top:20px;
+        padding:10px 20px;
+        border:none;
+        border-radius:10px;
+        background:#fff;
+        color:#ff6b81;
+        font-size:16px;
+        cursor:pointer;
+    }
+    .hidden{
+        display:none;
+    }
+
+    /* --- Added gallery styles --- */
+    .gallery{
+        display:flex;
+        justify-content:center;
+        gap:15px;
+        margin-top:20px;
+        flex-wrap:wrap;
+    }
+    .gallery img{
+        width:120px;
+        height:120px;
+        object-fit:cover;
+        border-radius:12px;
+        transition: transform 0.4s, box-shadow 0.4s;
+        cursor:pointer;
+    }
+    .gallery img:hover{
+        transform: scale(1.25);
+        box-shadow:0 0 20px #fff;
+    }
+    /* --- End added styles --- */
+
+    @keyframes fadeIn{
+        from{opacity:0; transform:translateY(20px);}
+        to{opacity:1; transform:translateY(0);}
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div id="page1">
+        <h1>Happy Anniversary (cringe )❤️</h1>
+        <p>From Class 7 to today… beautiful years.</p>
+        <button onclick="nextPage()">chaliya shuru karte hayn</button>
+    </div>
+
+    <div id="page2" class="hidden">
+        <h1>We Grew Up Together</h1>
+        <p>
+            School days, fights, long calls never but chats with skipied food,<br>
+            dreams that we have been menifests , struggles for better tomorow , and now living together.<br><br>
+            I didn't just fall in love with you…<br>
+            I grew up loving you. ik ik chat gpt line but emo bojh sala
+        </p>
+
+        <!-- Added Photo Hover Gallery -->
+        <div class="gallery">
+            <img src="./WhatsApp Image 2026-02-04 at 9.48.58 AM (1).jpeg" alt="Memory 1">
+            <img src="./WhatsApp Image 2026-02-04 at 9.48.58 AM (2).jpeg" alt="Memory 2">
+            <img src="./WhatsApp Image 2026-02-04 at 9.48.58 AM.jpeg" alt="Memory 3">
+        </div>
+
+        <button onclick="nextPage2()">Mat dekh lalii </button>
+    </div>
+
+    <div id="page3" class="hidden">
+        <h1>Still Choosing You wrong no one here to choose me </h1>
+        <p>
+           Bocho , years of ups and downs still exists  <br>
+            in life that we been together from you mean count your self idk 🤨 .<br><br>
+            <b>From Class 7 to forever — finding for better everyday in you.</b>
+        </p>
+    </div>
+</div>
+
+<script>
+function nextPage(){
+    document.getElementById("page1").classList.add("hidden");
+    document.getElementById("page2").classList.remove("hidden");
+}
+function nextPage2(){
+    document.getElementById("page2").classList.add("hidden");
+    document.getElementById("page3").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
